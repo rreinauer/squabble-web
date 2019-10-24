@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   background: rgb(31, 40, 51);
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   display: flex;
   flex-direction: column;
