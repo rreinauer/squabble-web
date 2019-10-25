@@ -1,12 +1,11 @@
 import React from 'react';
-import { SingleSquabblePage, MySquabbles, NavBar } from './Components';
+import { SingleSquabblePage, MySquabbles, NavBar } from '.';
 import { connect } from 'react-redux';
 import './Home.css';
+import Login from './Login';
 
-function Home({ mySquabbles, selectedSquabble }) {
-  const [selected, setSelected] = React.useState();
-
-  return (
+function Home({ mySquabbles, selectedSquabble, isLoggedIn }) {
+  return isLoggedIn ? (
     <div id="home">
       <NavBar />
       <div className="content">
@@ -17,10 +16,14 @@ function Home({ mySquabbles, selectedSquabble }) {
         )}
       </div>
     </div>
+  ) : (
+    <Login />
   );
 }
 
 const mapStateToProps = state => ({
+  username: state.user.username,
+  isLoggedIn: !!state.user.id,
   mySquabbles: state.squabble.mySquabbles,
   selectedSquabble: state.squabble.selectedSquabble,
 });

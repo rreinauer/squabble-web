@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import { clearSelected } from './store';
+import { clearSelected } from '../store';
 import './Squabble.css';
 
 function SingleSquabblePage({ squabble, clearSelected }) {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './Squabble.css';
-import { setSelected } from './store';
+import { setSelected } from '../store';
 
 function SingleSquabble({ squabble, setSelected }) {
   return (

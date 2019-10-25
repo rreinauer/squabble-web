@@ -1,6 +1,5 @@
 import React from 'react';
-import logo from './squabble2.png';
-import Routes from './Routes';
+import logo from '../assets/squabble2.png';
 import { Link } from 'react-router-dom';
 import './App.css';
 

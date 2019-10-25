@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import { Entry, Home, Login } from './Components';
+import { Entry, Home, Login } from '.';
 
 function App() {
   return (
