@@ -5,8 +5,8 @@ import './Squabble.css';
 function MySquabbles({ squabbles }) {
   return (
     <div className="squabble-feed">
-      {squabbles.map(squabble => (
-        <SingleSquabble squabble={squabble} />
+      {squabbles.map((squabble, i) => (
+        <SingleSquabble key={i} squabble={squabble} />
       ))}
     </div>
   );

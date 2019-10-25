@@ -6,7 +6,7 @@ import './App.css';
 
 function Entry() {
   return (
-    <div className="App">
+    <div className="App-entry">
       <Link to="/home">
         <img src={logo} id="logo" alt="squabble" />
       </Link>

@@ -4,19 +4,31 @@
   width: 100vw;
   align-items: center;
 }
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+}
 .single-squabble {
+  position: relative;
   background-color: rgba(255, 255, 255, 0.89);
-  width: 65%;
+  width: 50%;
   margin: 15px;
   padding: 10px 10px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.single-squabble:hover {
+  box-shadow: 2px 2px 5px grey;
+  cursor: pointer;
 }
 .user-box {
   display: flex;
-  width: 100%;
+  width: 60%;
   justify-content: space-between;
 }
 .user-info {
@@ -25,7 +37,7 @@
   flex-direction: column;
 }
 .vote-button {
-  margin-top: 10px;
+  margin-top: 5px;
   outline: none;
   background-color: white;
   height: 25px;
@@ -38,4 +50,26 @@
 .vote-button:hover {
   background-color: rgb(255, 59, 1);
   cursor: pointer;
+}
+.squabble-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.user {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.icon {
+  color: rgb(31, 40, 51);
+}
+.icon:hover {
+  color: rgb(255, 59, 1);
+  cursor: pointer;
+}
+.close {
+  position: absolute;
+  padding: 6px 10px;
+  right: 0;
+  top: 0;
 }

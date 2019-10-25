@@ -1,18 +1,28 @@
 import React from 'react';
-import NavBar from './NavBar';
+import { SingleSquabblePage, MySquabbles, NavBar } from './Components';
+import { connect } from 'react-redux';
 import './Home.css';
-import MySquabbles from './MySquabbles';
-import { squabbles } from './data';
 
-function Home() {
-  const [mySquabbles, setSquabbles] = React.useState(squabbles);
+function Home({ mySquabbles, selectedSquabble }) {
+  const [selected, setSelected] = React.useState();
+
   return (
     <div id="home">
       <NavBar />
       <div className="content">
-        <MySquabbles squabbles={mySquabbles} />
+        {selectedSquabble.title ? (
+          <SingleSquabblePage squabble={selectedSquabble} />
+        ) : (
+          <MySquabbles squabbles={mySquabbles} />
+        )}
       </div>
     </div>
   );
 }
-export default Home;
+
+const mapStateToProps = state => ({
+  mySquabbles: state.squabble.mySquabbles,
+  selectedSquabble: state.squabble.selectedSquabble,
+});
+
+export default connect(mapStateToProps)(Home);

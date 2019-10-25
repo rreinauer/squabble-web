@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
-import Entry from './Entry';
-import Home from './Home';
+import { Route } from 'react-router-dom';
+import { Entry, Home, Login } from './Components';
 
 function App() {
   return (
@@ -11,6 +10,9 @@ function App() {
       </Route>
       <Route exact path="/home">
         <Home />
+      </Route>
+      <Route exact path="/login">
+        <Login />
       </Route>
     </div>
   );

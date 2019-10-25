@@ -1,0 +1,44 @@
+#login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+#login-form {
+  display: flex;
+  flex-direction: column;
+}
+.form-line {
+  margin: 20px 0px;
+  border-radius: 5px;
+}
+#login-btn {
+  margin: 25px 0px 15px 0px;
+  height: 40px;
+  width: 300px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: BOLD;
+  color: rgb(31, 40, 51);
+  background-color: rgba(255, 255, 255, 0.89);
+}
+#login-btn:hover {
+  cursor: pointer;
+  background-color: lightgray;
+}
+input {
+  height: 40px;
+  width: 300px;
+}
+#login-logo {
+  width: 50%;
+  margin-bottom: 25px;
+}
+#new-user-link {
+  text-decoration: none;
+  color: rgb(255, 59, 1);
+}
